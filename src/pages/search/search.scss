@@ -1,3 +1,24 @@
 page-search {
-
+    ion-searchbar .img{
+        display: inline-block
+    }
+    ion-list{
+        font-family:"poiretOne"
+    }
+    ion-searchbar{
+        font-family:"poiretOne";
+        width:75%;
+       float: right;
+       right: 16px;
+        z-index:1;
+        margin-top:5px
+    }
+    .img{
+        width:23%;
+        height:15%;
+        float:left
+    }
+    ion-title{
+        font-family:"poiretOne"
+    }
 }

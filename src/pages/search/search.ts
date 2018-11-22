@@ -11,9 +11,18 @@ import { Items } from '../../providers';
 })
 export class SearchPage {
 
-  currentItems: any = [];
+  currentItem: any = [];
+  currentItems: Item[];
+  public person: {name: string, company: string, birthdate?: number};
+  dob: any;
+  age: any;
+  showProfile: boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) {
+    this.person = {name: undefined, company: undefined, birthdate: undefined};
+    this.dob = undefined;
+  this.currentItems = this.items.query();
+   }
 
   /**
    * Perform a service for the proper items.
@@ -21,10 +30,10 @@ export class SearchPage {
   getItems(ev) {
     let val = ev.target.value;
     if (!val || !val.trim()) {
-      this.currentItems = [];
+      this.currentItem = [];
       return;
     }
-    this.currentItems = this.items.query({
+    this.currentItem = this.items.query({
       name: val
     });
   }
@@ -38,4 +47,15 @@ export class SearchPage {
     });
   }
 
+   /**
+   * The view loaded, let's query our items for the list
+   */
+  ionViewDidLoad() {
+    let person = JSON.parse(localStorage.getItem('PERSON'));
+    if (person){
+      this.person = person;
+    //  this.age = this.getAge(this.person.birthdate);
+      this.dob = new Date(this.person.birthdate).toISOString();
+  }
+  }
 }

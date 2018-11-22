@@ -1,22 +1,175 @@
 <ion-header>
+  <img class="img" src="/assets/img/logo1.png" />
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="Rechercher vos clients"></ion-searchbar>
 
-  <ion-navbar>
-    <ion-title>{{ 'SEARCH_TITLE' | translate }}</ion-title>
-  </ion-navbar>
+  <!--<ion-navbar>
+    <ion-title>{{ 'SEARCH_TITLE' | translate }} d'un client </ion-title>
+  </ion-navbar>-->
 
 </ion-header>
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+ <!-- <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+ -->
+ <ion-list>
+    <ion-item-sliding>
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img src="/assets/img/welcome.jpg" />
+        </ion-avatar>
+        <h2>Chris </h2>
+        <p>Rintio</p>
+        <ion-note item-end>
+    <ion-icon name="arrow-dropright-circle"></ion-icon>
+      </ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
   <ion-list>
-    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
-      <ion-avatar item-start>
-        <img [src]="item.profilePic" />
-      </ion-avatar>
-      <h2>{{item.name}}</h2>
-      <p>{{item.about}}</p>
-      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
-    </button>
+    <ion-item-sliding>
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img src="/assets/img/welcome.jpg" />
+        </ion-avatar>
+        <h2>Chris </h2>
+        <p>Rintio</p>
+        <ion-note item-end>
+          <ion-icon name="arrow-dropright-circle"></ion-icon>
+        </ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img src="/assets/img/welcome.jpg" />
+        </ion-avatar>
+        <h2>Chris </h2>
+        <p>Rintio</p>
+        <ion-note item-end>
+          <ion-icon name="arrow-dropright-circle"></ion-icon>
+        </ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img src="/assets/img/welcome.jpg" />
+        </ion-avatar>
+        <h2>Chris </h2>
+        <p>Rintio</p>
+        <ion-note item-end>
+          <ion-icon name="arrow-dropright-circle"></ion-icon>
+        </ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img src="/assets/img/welcome.jpg" />
+        </ion-avatar>
+        <h2>Chris </h2>
+        <p>Rintio</p>
+        <ion-note item-end>
+          <ion-icon name="arrow-dropright-circle"></ion-icon>
+        </ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img src="/assets/img/welcome.jpg" />
+        </ion-avatar>
+        <h2>Chris </h2>
+        <p>Rintio</p>
+        <ion-note item-end>
+          <ion-icon name="arrow-dropright-circle"></ion-icon>
+        </ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img src="/assets/img/welcome.jpg" />
+        </ion-avatar>
+        <h2>Chris </h2>
+        <p>Rintio</p>
+        <ion-note item-end>
+          <ion-icon name="arrow-dropright-circle"></ion-icon>
+        </ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img src="/assets/img/welcome.jpg" />
+        </ion-avatar>
+        <h2>Chris </h2>
+        <p>Rintio</p>
+        <ion-note item-end>
+          <ion-icon name="arrow-dropright-circle"></ion-icon>
+        </ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 </ion-content>

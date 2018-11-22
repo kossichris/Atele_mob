@@ -1,14 +1,14 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ pageTitle }}</ion-title>
+    <span><ion-title>Carte | Retrouver un client</ion-title></span>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content>
 
-  <form [formGroup]="form" *ngIf="settingsReady">
+  <!--<form [formGroup]="form" *ngIf="settingsReady">
     <ion-list *ngIf="page == 'main'">
       <ion-item>
         <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
@@ -40,6 +40,27 @@
         <ion-input formControlName="option4"></ion-input>
       </ion-item>
     </ion-list>
-  </form>
+  </form>-->
+
+  <ion-card>
+
+  <img src="/assets/img/advance-card-map-madison.png">
+  <ion-fab right top>
+    <button ion-fab>
+      <ion-icon name="pin"></ion-icon>
+    </button>
+  </ion-fab>
+
+ 
+
+  <ion-item>
+    <ion-icon name="pin"></ion-icon>
+    <button ion-button icon-start clear item-end>
+      <ion-icon name="navigate"></ion-icon>
+      Commencer
+    </button>
+  </ion-item>
+
+</ion-card>
 
 </ion-content>

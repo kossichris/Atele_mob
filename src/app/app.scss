@@ -14,3 +14,27 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@font-face {
+    font-family: poiretOne;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/poiret-one/PoiretOne-Regular.ttf') format('truetype')
+       
+  }
+  @font-face {
+    font-family: ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/ubuntu/Ubuntu-L.ttf') format('truetype')
+       
+  }
+  @font-face {
+    font-family: ubuntuC;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/ubuntu/Ubuntu-C.ttf') format('truetype')
+       
+  }
+  body {
+      font-family: "poiretOne"
+  }

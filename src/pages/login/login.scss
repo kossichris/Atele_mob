@@ -1,13 +1,19 @@
 page-login {
+    ion-label {
+        font-family:"poiretOne"
+    }
     
     .btn{
+        font-family:"ubuntuC";
         display: block;
         margin-left: auto;
         margin-right: auto;
         width:100%;
         height: 4.6rem;
+        border-radius: 30px;
         //background: url('../assets/img/btn.png') no-repeat transparent;
-        background-color: #6381AF
+        background-color: #6381AF;
+        color:white
     
     
       }
@@ -21,13 +27,13 @@ page-login {
 
       .splash-logo {
         margin: auto;
-        background: url('../assets/img/logo3.png') repeat transparent;
+        background: url('../assets/img/logo1.png') repeat transparent;
         background-size: 100%;
-        border-radius:60px;
-        margin-top: -50px;
-        margin-bottom: -70px;
-        width: 188px;
-        height: 200px;
+        margin-top: -100px;
+        margin-bottom: -80px;
+        padding-bottom: 0px;
+        width: 250px;
+        height: 250px;
       }
     
     

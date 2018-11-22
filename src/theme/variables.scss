@@ -15,6 +15,24 @@ $font-path: "../assets/fonts";
 $text-color:        #000;
 $background-color:  #fff;
 
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Poiret One"), local("Segoe UI Light"),
+       local("Tahoma");
+}
+
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('mycustomfont.eot');
+  src: url('mycustomfont.eot?#iefix') format('embedded-opentype'),
+       url('mycustomfont.woff2') format('woff2'),
+       url('mycustomfont.woff') format('woff'),
+       url('mycustomfont.ttf') format('truetype'),
+       url('mycustomfont.svg#svgFontName') format('svg');
+}
 
 // Named Color Variables
 // --------------------------------------------------
