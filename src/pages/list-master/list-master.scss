@@ -78,6 +78,11 @@ page-list-master {
         width:95%;
         font-family:"poiretOne"
       }
+      .last{
+        margin-top: -8px;
+        width: 98%
+      }
+    
       &.activated {
         background-color: rgb(220, 220, 220);
       }
