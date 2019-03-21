@@ -3,13 +3,13 @@ page-search {
         display: inline-block
     }
     ion-list{
-        font-family:"poiretOne"
+        font-family:"ubuntuC"
     }
     ion-searchbar{
-        font-family:"poiretOne";
+        font-family:"ubuntuC";
         width:75%;
-       float: right;
-       right: 16px;
+        float: right;
+        right: 16px;
         z-index:1;
         margin-top:5px
     }
@@ -19,6 +19,13 @@ page-search {
         float:left
     }
     ion-title{
-        font-family:"poiretOne"
+        font-family:"ubuntuC"
+    }
+    h2{
+      color: rgb(158, 230, 24)
+    }
+
+    hr {
+      background-color:   rgb(158, 230, 24)
     }
 }

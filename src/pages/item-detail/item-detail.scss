@@ -1,4 +1,7 @@
 page-item-detail {
+  ion-header, ion-card {
+    font-family:"ubuntuC"
+  }
   .item-profile {
     width: 100%;
     background-position: center center;
@@ -11,4 +14,18 @@ page-item-detail {
     background: white;
     position: absolute;
   }
+  ion-card img{
+    display: block;
+    width: 44%;
+    margin-left: -15px;
+    margin-right: 32px;
+    float: left;
+
+    }
+    .satis{
+      margin-left: 12px;
+    font-family:"ubuntuC"
+
+    }
+
 }

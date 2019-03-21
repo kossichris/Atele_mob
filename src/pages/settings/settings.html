@@ -7,6 +7,9 @@
 </ion-header>
 
 <ion-content>
+  <ion-toolbar style="color: rgb(158, 230, 24);" class="toolbar" >
+    <ion-searchbar [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()" placeholder="Rechercher un endroit"></ion-searchbar>
+  </ion-toolbar>
 
   <!--<form [formGroup]="form" *ngIf="settingsReady">
     <ion-list *ngIf="page == 'main'">
@@ -44,23 +47,39 @@
 
   <ion-card>
 
-  <img src="/assets/img/advance-card-map-madison.png">
-  <ion-fab right top>
-    <button ion-fab>
-      <ion-icon name="pin"></ion-icon>
-    </button>
-  </ion-fab>
 
- 
 
-  <ion-item>
+
+   <ion-list [hidden]="autocompleteItems.length == 0">
+    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+      {{ item.description }}
+    </ion-item>
+  </ion-list>
+
+<h1>{{ title }}</h1>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+
+    <button class="geolocation-btn" ion-button full (click)="tryGeolocation()"> Essayer la géolocalisation </button>
+
+
+  <ion-item class="">
     <ion-icon name="pin"></ion-icon>
-    <button ion-button icon-start clear item-end>
+    <button style="color: rgb(158, 230, 24);" ion-button icon-start clear item-end>
       <ion-icon name="navigate"></ion-icon>
       Commencer
     </button>
   </ion-item>
 
+
+
 </ion-card>
+
+
 
 </ion-content>

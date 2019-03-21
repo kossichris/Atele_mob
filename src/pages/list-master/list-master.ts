@@ -3,6 +3,7 @@ import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angu
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
+import { RapportsPage } from '../rapports/rapports';
 
 @IonicPage()
 @Component({
@@ -21,7 +22,46 @@ export class ListMasterPage {
     this.person = {name: undefined, company: undefined, birthdate: undefined};
       this.dob = undefined;
     this.currentItems = this.items.query();
-    
+
+  }
+
+  listRapports() {
+    this.navCtrl.push('rapportsPage');
+  }
+
+ /* listNotePage() {
+    this.navCtrl.push('planningsPage');
+
+  }*/
+
+
+  addclient() {
+    this.navCtrl.setRoot('AddClientPage', {}, {
+      animate: true,
+      direction: 'forward'
+    });
+  }
+
+
+  listPlanningPage() {
+    this.navCtrl.push('planningsPage');
+
+
+  }
+
+  agenda() {
+    this.navCtrl.push('agendaPage');
+
+
+  }
+
+
+
+  AddRapportPage() {
+    this.navCtrl.setRoot('AddRapportPage', {}, {
+      animate: true,
+      direction: 'forward'
+    });
   }
 
   /**
@@ -39,7 +79,7 @@ export class ListMasterPage {
    * Prompt the user to add a new item. This shows our ItemCreatePage in a
    * modal and then adds the new item to our data source if the user created one.
    */
-  /*addItem() { 
+  /*addItem() {
     let addModal = this.modalCtrl.create('ItemCreatePage');
     addModal.onDidDismiss(item => {
       if (item) {
@@ -69,10 +109,12 @@ export class ListMasterPage {
 
   // Profile code
 
- 
-  
 
- 
+
+
+
+
+
   }
 /*
   reset(){

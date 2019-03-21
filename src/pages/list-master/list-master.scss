@@ -3,7 +3,7 @@ page-list-master {
        float: right;
    }
    .liste{
-     font-family:"ubuntu"
+     font-family:"ubuntuC"
    }
    .camera{
     background-color: white;
@@ -13,7 +13,10 @@ page-list-master {
     width:18px
 
 }
+ion-card-content{
+  background: url('../assets/imgs/client.svg') no-repeat transparent;
 
+}
 .navbar{
     background-color: #6381AF
 
@@ -23,11 +26,12 @@ page-list-master {
        color: white;
        margin-top: -15px;
        line-height: 35px;
-       font-family: "poiretOne"
+       font-family: "ubuntuC"
    }
     .splash-bg {
         position: relative;
-        background: url('../assets/img/profile.png') no-repeat transparent;
+        background-image: radial-gradient(circle at top right, #fff, rgb(158, 230, 24));
+       /* background: url('../assets/img/profile.png') no-repeat transparent;*/
         background-size: cover;
         height: 45%;
         z-index: 1;
@@ -35,7 +39,7 @@ page-list-master {
         animation: animatedBackground 40s linear infinite;
         box-shadow: 0 0 5px black;
       }
-    
+
       @keyframes animatedBackground {
         from { background-position: 0 0; }
         to { background-position: 100% 0; }
@@ -43,7 +47,7 @@ page-list-master {
       .profile{
         position:fixed
       }
-    
+
       .splash-info {
         position: relative;
         z-index: 2;
@@ -63,8 +67,8 @@ page-list-master {
       .back{
         background: url('../assets/img/back.png') repeat transparent;
         color:#6381AF;
-        font-family:'Poiret One'
-    
+        font-family:'ubuntuC'
+
       }
       .splash-intro {
         font-size: 13px;
@@ -76,15 +80,34 @@ page-list-master {
         margin-top:0px;
         margin-right:10px;
         width:95%;
-        font-family:"poiretOne"
+        font-family:"ubuntuC"
       }
       .last{
         margin-top: -8px;
         width: 98%
       }
-    
+
       &.activated {
         background-color: rgb(220, 220, 220);
       }
 
+      ion-card img {
+        display: block;
+        width: 36%;
+        margin-right: auto;
+        margin-left: auto
+      }
+      ion-card-header{
+        margin-left: 23px;
+      }
+      .card-header-md{
+        font-size: 14px
+      }
+
+
+
+.card-md {
+    margin: 4px;
+    border-radius: 8px;
+  }
 }

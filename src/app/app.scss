@@ -19,22 +19,76 @@
     font-style: normal;
     font-weight: 300;
     src: url('../assets/fonts/poiret-one/PoiretOne-Regular.ttf') format('truetype')
-       
+
   }
   @font-face {
     font-family: ubuntu;
     font-style: normal;
     font-weight: 300;
     src: url('../assets/fonts/ubuntu/Ubuntu-L.ttf') format('truetype')
-       
+
   }
   @font-face {
     font-family: ubuntuC;
     font-style: normal;
     font-weight: 300;
     src: url('../assets/fonts/ubuntu/Ubuntu-C.ttf') format('truetype')
-       
+
   }
   body {
       font-family: "poiretOne"
   }
+
+  .toolbar-background-md{
+    background-color:  rgb(158, 230, 24);
+  }
+  .toolbar-title-md{
+    color: #fff
+  }
+  .tabs-md .tabbar {
+    background: #fff;
+    /* color: #fff; */
+}
+.tabs-md .tab-button[aria-selected=true] {
+  color: #b4d92a;
+  padding: 0;
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+  color: #b4d92a;
+}
+.tabs-md .tab-button-icon{
+  color : #000
+}
+
+.add{
+  float:right;
+  border-radius:54px;
+  background-color: #b4d92a;
+  height: 4.6rem;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+}
+.alert-md .alert-wrapper {
+  border-radius: 20px;
+  color: #b4d92a;
+  background-color: #daeade;
+  font-family: ubuntuC;
+}
+
+.alert-md .alert-button{
+  color: #b4d92a;
+  font-family: ubuntuC;
+}
+
+.alert-md [aria-checked=true] .alert-radio-label {
+  color: #b4d92a
+}
+.alert-md [aria-checked=true] .alert-radio-icon {
+  border-color: #b4d92a;
+}
+
+.alert-md .alert-radio-inner{
+  background-color: #b4d92a
+}

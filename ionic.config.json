@@ -1,5 +1,7 @@
 {
   "name": "Atele",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

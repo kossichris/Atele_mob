@@ -11,7 +11,8 @@
     "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
-    "@angular/animations": "5.2.11",
+    "@agm/core": "^1.0.0-beta.5",
+    "@angular/animations": "^5.2.11",
     "@angular/common": "5.2.11",
     "@angular/compiler": "5.2.11",
     "@angular/compiler-cli": "5.2.11",
@@ -20,22 +21,46 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/calendar": "^5.3.0",
+    "@ionic-native/camera": "4.3.3",
     "@ionic-native/core": "~4.15.0",
+    "@ionic-native/geolocation": "^5.3.0",
     "@ionic-native/splash-screen": "~4.15.0",
     "@ionic-native/status-bar": "~4.15.0",
     "@ionic/storage": "2.2.0",
+    "@ngx-translate/core": "^8.0.0",
+    "@ngx-translate/http-loader": "^2.0.0",
+    "angular-calendar": "^0.26.11",
+    "angular-calendar-week-hours-view": "^1.0.2",
+    "chart.js": "^2.8.0",
+    "cordova-plugin-calendar": "5.1.4",
+    "cordova-plugin-geolocation": "4.0.1",
+    "cordova-sqlite-storage": "3.1.0",
+    "intl": "^1.2.5",
     "ionic-angular": "3.9.2",
+    "ionic2-calendar": "^0.4.6",
     "ionicons": "3.0.0",
+    "moment": "^2.24.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26",
-    "@ionic-native/camera": "4.3.3",
-    "@ngx-translate/core": "8.0.0",
-    "@ngx-translate/http-loader": "^2.0.0"
+    "zone.js": "0.8.26"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.0",
+    "@types/googlemaps": "^3.30.19",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To track your walks"
+      },
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-calendar": {}
+    }
+  },
+  "config": {
+    "ionic_copy": "./config/copy.config.js"
+  }
 }

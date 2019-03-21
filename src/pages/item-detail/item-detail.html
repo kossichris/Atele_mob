@@ -1,18 +1,78 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ item.name }}</ion-title>
+    <!--ion-title>{{ item.name }}</ion-title-->
+     <ion-title>Détail client</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-  </div>
 
-  <div class="item-detail" padding>
+  <ion-col col-12>
+
+              <ion-card class="card">
+
+
+            <ion-card-content >
+             <!--img #profilePic [style.background-image]="'url(' + item.profilePic + ')'" class="ajout" /-->
+             <img src="assets/img/background.jpg" class="ajout" />
+
+                <div>
+                Christian  <small> Rintio</small>
+                </div>
+            </ion-card-content>
+
+          </ion-card>
+    </ion-col>
+     <ion-col col-12>
+  <div class="satis">
+               Satisfaction client
+                </div>
+              <ion-card class="card">
+
+
+            <ion-card-content >
+     <canvas #barCanvas></canvas>
+            </ion-card-content>
+
+          </ion-card>
+    </ion-col>
+
+        <ion-col col-12>
+  <div class="satis">
+               Services souscrits
+                </div>
+              <ion-card class="card">
+
+
+            <ion-card-content >
+        <canvas #doughnutCanvas></canvas>
+
+            </ion-card-content>
+
+          </ion-card>
+    </ion-col>
+
+        <ion-col col-12>
+  <div class="satis">
+               Services souscrits
+                </div>
+              <ion-card class="card">
+
+
+            <ion-card-content >
+        <canvas #lineCanvas></canvas>
+
+            </ion-card-content>
+
+          </ion-card>
+    </ion-col>
+
+
+  <!--div class="item-detail" padding>
     <h2>{{item.name}}</h2>
     <p>{{item.about}}</p>
-  </div>
+  </div-->
 </ion-content>

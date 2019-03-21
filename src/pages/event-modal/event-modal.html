@@ -1,0 +1,51 @@
+<!--
+  Generated template for the EventModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Détails évènements</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+ 	<ion-item>
+          <ion-label floating>
+        Libellé
+        </ion-label>
+        <ion-input type="text"  [(ngModel)]="event.title" ></ion-input>
+
+				</ion-item>
+
+      <ion-item>
+          <ion-label >Date Début</ion-label>
+          <ion-datetime required name="birthdate" displayFormat="DD/MM/YYYY HH:mm" pickerFormat="DD/MM/YYYY HH:mm" [(ngModel)]="event.startTime" [min]="minDate" [ngModelOptions]="{standalone:true}"></ion-datetime>
+      </ion-item>
+
+       <ion-item>
+          <ion-label >Date Fin</ion-label>
+          <ion-datetime required name="birthdate2" displayFormat="DD/MM/YYYY HH:mm" pickerFormat="DD/MM/YYYY HH:mm" [(ngModel)]="event.endDate" [min]="minDate" [ngModelOptions]="{standalone:true}"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>
+       Tous les jours?
+        </ion-label>
+        <ion-checkbox [(ngModel)]="event.allDay"  ></ion-checkbox>
+
+				</ion-item>
+
+        <div padding>
+				<button ion-button full  (click)="save()" class="btn"  icon-start>
+      <ion-icon name='checkmark'></ion-icon>
+
+        Ajouter Rendez-vous</button>
+			</div>
+</ion-list>
+</ion-content>

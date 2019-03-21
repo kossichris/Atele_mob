@@ -1,11 +1,42 @@
 page-settings {
 
+  ion-app._gmaps_cdv_ .nav-decor{
+    background-color: transparent !important;
+  }
+
+
+      #map {
+      height: 100%;
+      width: 100%;
+
+      }
+
+  .geolocation-btn{
+    margin: 0px;
+    padding: 0px;
+  }
+
 
     ion-title {
-        font-family:"poiretOne"
+        font-family:"ubuntuC"
     }
     ion-item{
-        font-family:"poiretOne"
+        font-family:"ubuntuC";
+        color: rgb(158, 230, 24);
+
     }
+
+.start{
+  background-image: linear-gradient(to left, rgb(158, 230, 24),  rgb(204, 224, 163));
+
+
+}
+
+.toolbar{
+  background-color: rgb(158, 230, 24);
+}
+.geolocation-btn{
+  background-color: rgb(158, 230, 24);
+}
 
 }

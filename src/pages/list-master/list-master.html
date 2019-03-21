@@ -43,11 +43,11 @@
 
 
 <ion-content padding>
-  
-  
+
+
   <form #formCtrl="ngForm">
       <div align="center" *ngIf="formCtrl.form.valid">
-          
+
         <h1> Profile</h1>
         <img class="profile-image" src="assets/imgs/profile.jpg">
           <h4>{{person.name}}, {{person.company}}</h4>
@@ -70,18 +70,17 @@
           <ion-label >Birth Date</ion-label>
           <ion-datetime required name="birthdate" displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}"></ion-datetime>
       </ion-item>
-      
+
   </ion-list>
   <button color="secondary" [disabled]="!formCtrl.form.valid" ion-button block (click)="save()">Save</button>
   <button color="danger" ion-button block (click)="reset()">Reset</button>
 </form>
 </ion-content>-->
-<ion-header >
+<ion-header style="background-color: white">
 
   <ion-navbar class="navbar" >
     <ion-title>
-      <ion-icon name="menu"></ion-icon>    
-      <ion-icon name="more" class="menuright" ></ion-icon>    
+      <ion-icon name="menu"></ion-icon>
 
     </ion-title>
   </ion-navbar>
@@ -93,7 +92,7 @@
   <div class="splash-bg"></div>
   <div class="splash-info">
     <div class="splash-logo">
-      <ion-icon name="camera" class="camera" ></ion-icon>    
+      <ion-icon name="camera" class="camera" ></ion-icon>
     </div>
     <div class="profilInfo">
     <span>Christian</span><br>
@@ -106,28 +105,31 @@
   <ion-grid>
   <ion-row>
     <ion-col col-6>
-              <ion-card class="card" >
+
+              <ion-card class="card" (click)="addclient()" >
 
             <ion-card-header>
               Nouveau client
             </ion-card-header>
 
-            <ion-card-content>
-            <ion-icon class="ajout" name="person-add"></ion-icon>  
+            <ion-card-content >
+             <img src="assets/imgs/addclient.svg" class="ajout" />
+
             </ion-card-content>
 
           </ion-card>
     </ion-col>
       <ion-col col-6>
-      
-            <ion-card class="card" >
+
+            <ion-card class="card" (click)="listPlanningPage()" >
 
               <ion-card-header>
-                Nouveau planning
+                Mes plannings
               </ion-card-header>
 
               <ion-card-content>
-              <ion-icon  class="ajout" name="calendar"></ion-icon>  
+                <img src="assets/imgs/diary.svg" class="ajout" />
+
               </ion-card-content>
 
             </ion-card>
@@ -136,50 +138,40 @@
   </ion-row>
   <ion-row>
     <ion-col col-6>
-                
-                <ion-card class="card" >
+
+                <ion-card class="card" (click)="listRapports()">
 
               <ion-card-header>
-                Nouveau rapport
+                Mes Rapports
               </ion-card-header>
 
               <ion-card-content>
-              <ion-icon name="bookmarks"></ion-icon>  
+             <img src="assets/imgs/report.svg" class="ajout" />
+
               </ion-card-content>
 
             </ion-card>
     </ion-col>
-      <ion-col col-6>
-                       <ion-card class="card" >
+     <ion-col col-6>
 
-                    <ion-card-header>
-                     Nouveau prospect
-                    </ion-card-header>
+                <ion-card class="card" (click)="agenda()">
 
-                    <ion-card-content>
-                    <ion-icon name="locate"></ion-icon>  
-                    </ion-card-content>
+              <ion-card-header>
+               Mon agenda
+              </ion-card-header>
 
-                  </ion-card>
+              <ion-card-content>
+                <img src="assets/imgs/calendar.svg" class="ajout" />
 
-      </ion-col>
-       <ion-col col-12>
-                       <ion-card class="card last" >
+              </ion-card-content>
 
-                    <ion-card-header>
-                     Ma note
-                    </ion-card-header>
+            </ion-card>
+    </ion-col>
 
-                    <ion-card-content>
-                    <ion-icon name="locate"></ion-icon>  
-                    </ion-card-content>
 
-                  </ion-card>
-
-      </ion-col>
   </ion-row>
 </ion-grid>
 
-  
+
 </ion-content>
 

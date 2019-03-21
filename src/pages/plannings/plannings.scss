@@ -1,0 +1,31 @@
+page-plannings {
+  ion-searchbar .img{
+    display: inline-block
+}
+ion-list{
+    font-family:"ubuntuC"
+}
+ion-searchbar{
+    font-family:"ubuntuC";
+    width:75%;
+    float: right;
+    right: 16px;
+    z-index:1;
+    margin-top:5px
+}
+.img{
+    width:23%;
+    height:15%;
+    float:left
+}
+ion-title{
+    font-family:"ubuntuC"
+}
+h2{
+  color: rgb(158, 230, 24)
+}
+
+hr {
+  background-color:   rgb(158, 230, 24)
+}
+}
